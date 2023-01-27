@@ -3,12 +3,16 @@ import Main from './Main';
 import Footer from './Footer';
 import PopupWithForm from './PopupWithForm';
 import { useState } from 'react';
+import ImagePopup from './ImagePopup';
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
-
+  const [isImagePopup, setIsImagePopup] = useState(false);
+  const [selectedCard, setSelectedCard] = useState({});
+  
+ 
   function handleEditProfileClick(){
     setIsEditProfilePopupOpen(true)
   };
@@ -25,6 +29,12 @@ function App() {
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setIsEditAvatarPopupOpen(false);
+    setIsImagePopup(false);
+  };
+
+  function handleCardClick(card){
+    setIsImagePopup(true);
+    setSelectedCard(card);
   };
 
 
@@ -34,7 +44,8 @@ function App() {
 
       <Main onEditProfile={handleEditProfileClick} 
             onAddPlace={handleAddPlaceClick} 
-            onEditAvatar={handleEditAvatarClick} />
+            onEditAvatar={handleEditAvatarClick} 
+            onCardClick={handleCardClick}/>
 
       <Footer />
 
@@ -89,22 +100,14 @@ function App() {
         onClose={closeAllPopups}
         >
       </PopupWithForm>
+
+      <ImagePopup
+      isOpen={isImagePopup}
+      onClose={closeAllPopups}
+      card={selectedCard}>
+      </ImagePopup>
     </div> 
   )
 }
 
 export default App;  
-
-//готовая разметка JSX
-
-      // {
-      //   isCardPopup && (
-      //     <div className="popup popup_photo" id="cardPopup">
-      //       <div className="popup__photo-container" id="cardPopupContainer">
-      //         <img className="popup__photo-big" />
-      //         <p className='popup__photo-container-title'></p>
-      //         <button className="popup__close" id="closeCardButton" type="button" aria-label="закрыть"></button>
-      //       </div>
-      //     </div>
-      //   )
-      // }

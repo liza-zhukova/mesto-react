@@ -2,7 +2,7 @@ import { api } from '../utils/api';
 import { useEffect, useState } from 'react';
 import Card from './Card';
 
-function Main({onEditProfile, onAddPlace, onEditAvatar}){
+function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick}){
 
     const [name, setUserName] = useState([]);
     const [about, setUserOpinion] = useState([]);
@@ -47,6 +47,7 @@ function Main({onEditProfile, onAddPlace, onEditAvatar}){
                     <Card
                         card={card}
                         key={card._id}
+                        onCardClick={onCardClick}
                     />
                 ))}
             </div>
