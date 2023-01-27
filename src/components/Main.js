@@ -5,8 +5,8 @@ import Card from './Card';
 function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick}){
 
     const [name, setUserName] = useState('');
-    const [about, setUserOpinion] = useState([]);
-    const [avatar, setUserAvatar] = useState([]);
+    const [about, setUserOpinion] = useState('');
+    const [avatar, setUserAvatar] = useState('');
     const [cards, setCards] = useState([]);
     
     useEffect(() =>{
