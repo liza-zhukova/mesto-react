@@ -24,11 +24,11 @@ function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike,
             <div className="element">
                 { cards.map(card =>(
                     <Card
-                        card = {card}
-                        key = {card._id}
-                        onCardClick = {onCardClick}
-                        onCardLike = {onCardLike}
-                        onCardDelete = {onCardDelete}
+                    card = {card}
+                    key = {card._id}
+                    onCardClick = {onCardClick}
+                    onCardLike = {onCardLike}
+                    onCardDelete = {onCardDelete}
                     />
                 ))}
             </div>
