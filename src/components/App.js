@@ -9,6 +9,13 @@ import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
 
+// написала весь код, все работает, но есть проблема, при лайке и дизлайке дерево рендерится и появляется белый экран, 
+// не понимаю в чем проблема, еще пишет, что значение _id не найдено в компоненте Card, в переменной isOwn, 
+// выводила в консоль, значения выводятся...не понятно почему ошибка "не найдено"
+// при обновлении приложения лайки и дизлайки актуальные, получается проблема где то в стейте вероятно в первом, но я ее не вижу
+// спрашивала в чате в чем проблема, не оч помогло, может уже за 2 дня глаз замылен
+// если поможете буду очень благодарна, потому что я уже теряю веру и понимание :с
+
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
