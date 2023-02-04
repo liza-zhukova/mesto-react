@@ -80,7 +80,7 @@ class Api{
           method: isLiked ? "PUT" : "DELETE",
           headers: this._headers,
       })
-      .then(this._checkResponse);;
+      .then(this._checkPromise);
       return this._likedCard;
     }
       

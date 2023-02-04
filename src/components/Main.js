@@ -17,7 +17,7 @@ function Main({
     <main className="main">
       <section className="profile">
         <div className="profile__avatar-container" onClick={onEditAvatar}>
-          <img className="profile__avatar" src={`${currentUser.avatar}`} />
+          <img className="profile__avatar" src={`${currentUser.avatar}`} alt='аватар' />
           <button
             className="profile__avatar-edit"
             type="button"

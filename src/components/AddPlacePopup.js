@@ -41,10 +41,10 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
           id="title-input"
           className="popup__container-item"
           type="text"
-          value={cardName}
+          value={cardName || ''}
           onChange={handleCardNameChange}
           placeholder="Название"
-          name="name"
+          name='name' 
           required
           minLength="2"
           maxLength="30"
@@ -56,7 +56,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
           id="link-input"
           className="popup__container-item"
           type="url"
-          value={cardLink}
+          value={cardLink || ''} 
           onChange={handleCardLinkChange}
           placeholder="Ссылка на картинку"
           name="link"

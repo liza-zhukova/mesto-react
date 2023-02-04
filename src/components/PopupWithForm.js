@@ -18,7 +18,6 @@ function PopupWithForm({
           method="post"
           name={name}
           onSubmit={onSubmit}
-          noValidate
         >
           {children}
           <button type="submit" className="popup__container-button">
